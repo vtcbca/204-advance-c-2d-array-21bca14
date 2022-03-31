@@ -1,0 +1,36 @@
+/* WAP */
+#include<stdio.h>
+#include<conio.h>
+void main()
+{
+	char s[5][10];
+	int i,j,l=0;
+	clrscr();
+	for(i=0;i<5;i++)
+	{
+		printf("\n Enter name %d:",i+1);
+		flushall();
+		gets(s[i]);
+	}
+
+	clrscr();
+	printf("\n Print 5 string:");
+
+	for(i=0;i<5;i++);
+		printf("name %d:%s\n",i+1,s[i]);
+	printf("\n Vowel \n");
+	for(i=0;i<5;i++)
+	{
+		l=0;
+		for(j=0;j<9;j++)
+		{
+			if(s[i][j]=='a'||s[i][j]=='e'||s[i][j]=='i'||s[i][j]=='o'||s[i][j]=='u'||s[i][j]=='A'||s[i][j]=='E'||s[i][j]=='I'||s[i][j]=='O'||s[i][j]=='U')
+			{
+				l=l+1;
+				printf("%s: %d: %c", s[i],l,s[i][j]);
+			}
+		}
+	printf("\n");
+	}
+	getch();
+}
